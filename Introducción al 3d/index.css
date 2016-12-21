@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+
+}
+
+nav {
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  background: #1a9ee4;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin: 0;
+  height: 59px; 
+  z-index: 5;
+}
+
+li {
+  list-style: none;
+}
+
+nav > li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0 20px 0;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 20vw;
+}
+nav > li:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: radial-gradient(at top,#1aeee4 0%, #1a9ee4 60%);
+  z-index: 1;
+}
+nav > li:hover:after {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+nav a {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  text-decoration: none;
+  color: white;
+}
+
+nav > li > ul {
+  opacity: 0;
+  border-radius: 10px;
+  display: none;
+  text-align: left;
+  padding: 0 0 0 0;
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+nav > li:hover > ul {
+  display: block;
+  trasition: all 5s ease;
+  opacity: 1;
+}
+
+nav > li > ul > li {
+  position: relative;
+  width: 18vw;
+  padding: 0px 0px 0px 2vw;
+  margin: 0 0 0 0; 
+  z-index: 2;
+  overflow: auto;
+}
+nav > li > ul > li:hover {
+  transition: all 0.5s ease;
+  background-color: #1aeee4;
+}
+nav > li > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+}
+.secciones {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.secciones:nth-child(1) {
+  margin-top: 42px !important;
+}
+
+.secciones {
+  margin-top: 670px; 
+}
+.fondo {
+  transform: translateZ(-1px) scale(2);
+  width: 100vw;  
+}
+.informacion {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate3d(0, -50%, 0);
+}
+
+.informacion > img {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translatey(-50%);
+  width: 45vw;
+  border-radius: 50px;
+}
+
+.informacion > p {
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translatey(-50%);
+  background-color: rgba(255, 255, 255, .7);
+  padding: 20px;
+  border-radius: 50px;
+  width: 45vw;
+  margin-right: 10px;
+}
+
+.secciones:nth-child(2n) .informacion > p {
+  right: unset;
+  left: 5px;
+}
+
+.secciones:nth-child(2n) .informacion > img {
+  left: unset;
+  right: 10px;
+}

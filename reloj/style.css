@@ -1,0 +1,53 @@
+@keyframes giro{
+  0% {transform: rotate(-90deg)}
+  100% {transform: rotate(270deg)}
+}
+body{
+  background-color: #555555;
+}
+div.reloj {
+  width: 500px;
+  height: 500px;
+  background-color: #000000;
+  border: 1px #000000 solid;
+  border-radius: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+div.segundero{
+  width: 245px;
+  height: 2px;
+  background-color: #FF0000;
+  transform-origin: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  z-index: 1;
+  animation: giro 60s linear infinite;
+}
+
+div.minutos{
+  width: 230px;
+  height: 5px;
+  background-color: #FFFFFF;
+  transform-origin: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  animation: giro 3600s linear infinite;
+}
+
+div.horas{
+  width: 100px;
+  height: 8px;
+  background-color: #FFFFFF;
+  transform-origin: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  animation: giro 43200s linear infinite;
+}
